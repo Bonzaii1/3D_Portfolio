@@ -1,5 +1,8 @@
-import React, { useRef, useState } from 'react'
+import React, { Suspense, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
+import { Canvas } from '@react-three/fiber';
+import Fox from '../models/Fox';
+import Loader from '../components/Loader';
 
 const Contact = () => {
     const formRef = useRef(null);
@@ -97,6 +100,25 @@ const Contact = () => {
                         {isLoading ? 'Sending...' : 'Send Message'}
                     </button>
                 </form>
+            </div>
+
+            <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]'>
+                <Canvas
+                    camera={{
+                        position: [0, 0, 5],
+                        fov: 75,
+                        near: .1,
+                        far: 1000
+                    }}>
+                    <directionalLight intensity={2.5} position={[0, 0, 1]} />
+                    <ambientLight intensity={.25} />
+                    <Suspense fallback={<Loader />}>
+                        <Fox
+                            position={[0.5, 0.35, 0]}
+                            rotation={[12.6, -0.6, 0]}
+                            scale={[.5, .5, .5]} />
+                    </Suspense>
+                </Canvas>
             </div>
         </section>
     )
