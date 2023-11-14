@@ -3,27 +3,33 @@ import emailjs from '@emailjs/browser';
 import { Canvas } from '@react-three/fiber';
 import Fox from '../models/Fox';
 import Loader from '../components/Loader';
+import useAlert from '../hooks/useAlert.js'
+import Alert from '../components/Alert';
 
 const Contact = () => {
     const formRef = useRef(null);
     const [form, setForm] = useState({ name: "", email: "", message: "" })
     const [isLoading, setIsLoading] = useState(false)
+    const [currentAnimation, setCurrentAnimation] = useState('idle')
 
+    const [alert, showAlert, hideAlert] = useAlert();
+    console.log(alert)
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value })
     }
 
     const handleFocus = () => {
-
+        setCurrentAnimation('walk');
     }
 
     const handleBlur = () => {
-
+        setCurrentAnimation('idle');
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setIsLoading(true);
+        setCurrentAnimation('hit');
 
         emailjs.send(
             import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -39,19 +45,27 @@ const Contact = () => {
 
         ).then(() => {
             setIsLoading(false);
-            // TODO: show success message
-            // TODO: hide and alert
+            showAlert({ show: true, text: 'Message sent Succesfully', type: 'success' })
 
-            setForm({ name: "", email: "", message: "" })
+            setTimeout(() => {
+                hideAlert()
+                setCurrentAnimation('idle')
+                setForm({ name: "", email: "", message: "" })
+            }, [3000])
+
+
         }).catch((error) => {
+            showAlert({ show: true, text: 'Error sending message', type: 'danger' })
             setIsLoading(false);
             console.log(error)
+            setCurrentAnimation('idle')
             //TODO : Show error message
         })
 
     }
     return (
         <section className='relative flex lg:flex-row flex-col max-container'>
+            {alert.show && <Alert {...alert} />}
             <div className='flex-1 min-w-[50%] flex flex-col'>
                 <h1 className='head-text'>Get in Touch!</h1>
                 <form className='w-full flex flex-col gap-7 mt-14'
@@ -116,7 +130,8 @@ const Contact = () => {
                         <Fox
                             position={[0.5, 0.35, 0]}
                             rotation={[12.6, -0.6, 0]}
-                            scale={[.5, .5, .5]} />
+                            scale={[.5, .5, .5]}
+                            currentAnimation={currentAnimation} />
                     </Suspense>
                 </Canvas>
             </div>
