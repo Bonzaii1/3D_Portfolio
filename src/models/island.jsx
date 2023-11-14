@@ -14,7 +14,7 @@ import { useFrame, useThree } from "@react-three/fiber";
 import islandScene from '../assets/3d/island.glb'
 import { a } from '@react-spring/three'
 
-const Island = ({ isRotating, setIsRotating, ...props }) => {
+const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
     const islandRef = useRef();
 
 
@@ -30,7 +30,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
         e.preventDefault();
         setIsRotating(true);
 
-        const clientX = e.touches ? e.touches[0] : e.clientX
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX
 
         lastX.current = clientX;
     }
@@ -50,7 +50,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
         e.preventDefault();
 
         if (isRotating) {
-            const clientX = e.touches ? e.touches[0] : e.clientX
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX
 
             const delta = (clientX - lastX.current) / viewport.width;
 
@@ -92,7 +92,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
             }
             islandRef.current.rotation.y += rotationSpeed.current
         } else {
-            const rotation = islandRef.current.roation.y;
+            const rotation = islandRef.current.rotation.y;
 
             const normalizedRotation =
                 ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
