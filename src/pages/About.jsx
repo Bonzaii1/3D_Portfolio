@@ -2,6 +2,7 @@ import React from 'react'
 import { skills, experiences } from '../constants'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import CTA from '../components/CTA';
 
 const About = () => {
     return (
@@ -47,7 +48,11 @@ const About = () => {
                 <div className='mt-12 flex'>
                     <VerticalTimeline>
                         {experiences.map((experience) => (
-                            <VerticalTimelineElement>
+                            <VerticalTimelineElement key={experience.company_name}
+                                date={experience.date}
+                                icon={<div className='flex justify-center items-center w-full h-full'><img src={experience.icon} alt={experience.company_name} className='w-[60%] h-[60%] object-contain' /></div>}
+                                contentStyle={{ borderBottom: '8px', borderStyle: 'solid', borderBottomColor: experience.iconBg, boxShadow: 'none' }}
+                                iconStyle={{ background: experience.iconBg }}>
                                 <div>
                                     <h3 className='text-black text-xl font-poppins font-semibold'>
                                         {experience.title}
@@ -69,6 +74,10 @@ const About = () => {
                     </VerticalTimeline>
                 </div>
             </div>
+
+            <hr className='border-slate-200' />
+
+            <CTA />
         </section >
     )
 }

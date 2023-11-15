@@ -1,4 +1,4 @@
-import { Suspense, useState } from 'react'
+import { Suspense, useState, useEffect, useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
 import Loader from '../components/Loader'
 
@@ -9,11 +9,29 @@ import Bird from '../models/Bird'
 import Plane from '../models/Plane'
 import HomeInfo from '../components/HomeInfo'
 
+import sakura from '../assets/sakura.mp3'
+
 
 
 const Home = () => {
+    const audioRef = useRef(new Audio(sakura));
+    audioRef.current.volume = .4
+    audioRef.current.loop = true
     const [IsRotating, setIsRotating] = useState(false);
     const [currentStage, setCurrentStage] = useState(1);
+    const [isPlayingMusic, setisPlayingMusic] = useState(false)
+
+
+    useEffect(() => {
+        if (isPlayingMusic) {
+            audioRef.current.play()
+        }
+
+        return () => {
+            audioRef.current.pause()
+        }
+    }, [isPlayingMusic])
+
 
     const adjustIslandForScreenSize = () => {
         let screenScale = null;
@@ -62,7 +80,7 @@ const Home = () => {
                     <Bird />
                     <Sky isRotating={IsRotating} />
                     <Island position={islandPosition} scale={islandScale} rotation={islandRotation} isRotating={IsRotating} setIsRotating={setIsRotating} setCurrentStage={setCurrentStage} />
-                    <Plane planeScale={planeScale} planePosition={planePosition} isRotating={IsRotating} rotation={[0, 20, 0]} />
+                    <Plane scale={planeScale} position={planePosition} isRotating={IsRotating} rotation={[0, 20, 0]} />
                 </Suspense>
             </Canvas>
 
