@@ -1,8 +1,8 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { selenelogo, umlogo } from "../assets/images";
 import {
     car,
     contact,
-    css,
+    python,
     estate,
     express,
     git,
@@ -11,26 +11,35 @@ import {
     javascript,
     linkedin,
     mongodb,
-    motion,
-    mui,
+    java,
     nextjs,
     nodejs,
     pricewise,
     react,
-    redux,
-    sass,
+    flask,
     snapgram,
     summiz,
     tailwindcss,
     threads,
-    typescript
+    typescript,
+    sqlLogo
 } from "../assets/icons";
 
 export const skills = [
     {
-        imageUrl: css,
-        name: "CSS",
-        type: "Frontend",
+        imageUrl: python,
+        name: "Python",
+        type: "Programming Language",
+    },
+    {
+        imageUrl: javascript,
+        name: "JavaScript",
+        type: "Programming Language",
+    },
+    {
+        imageUrl: java,
+        name: "Java",
+        type: "Programming Language",
     },
     {
         imageUrl: express,
@@ -53,9 +62,9 @@ export const skills = [
         type: "Frontend",
     },
     {
-        imageUrl: javascript,
-        name: "JavaScript",
-        type: "Frontend",
+        imageUrl: sqlLogo,
+        name: "SQL",
+        type: "Database",
     },
     {
         imageUrl: mongodb,
@@ -63,19 +72,14 @@ export const skills = [
         type: "Database",
     },
     {
-        imageUrl: motion,
-        name: "Motion",
-        type: "Animation",
-    },
-    {
-        imageUrl: mui,
-        name: "Material-UI",
-        type: "Frontend",
-    },
-    {
         imageUrl: nextjs,
         name: "Next.js",
         type: "Frontend",
+    },
+    {
+        imageUrl: flask,
+        name: "Flask",
+        type: "Backend",
     },
     {
         imageUrl: nodejs,
@@ -85,16 +89,6 @@ export const skills = [
     {
         imageUrl: react,
         name: "React",
-        type: "Frontend",
-    },
-    {
-        imageUrl: redux,
-        name: "Redux",
-        type: "State Management",
-    },
-    {
-        imageUrl: sass,
-        name: "Sass",
         type: "Frontend",
     },
     {
@@ -111,55 +105,27 @@ export const skills = [
 
 export const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
-        iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
+        title: "Sql Developer Intern",
+        company_name: "Selene Finance",
+        icon: selenelogo,
+        iconBg: "#00A583",
+        date: "May 2022 - August 2022",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Crafting complex SQL queries , and meticulously refining and enhancing the performance of established stored procedures using the powerful environment of Microsoft SQL Server Management Studio."
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
-        iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
+        title: "Software Engineer",
+        company_name: "University of Montemorelos",
+        icon: umlogo,
+        iconBg: "#9375ba",
+        date: "August 2022 - Present",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
-        iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
-        iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Spearheaded a remarkable initiative to internationalize a bespoke Student Management System, seamlessly deploying it in remote regions of Fiji and Papua New Guinea, optimizing educational processes on a global scale.",
+            "Orchestrated agile development methodologies and employed an advanced toolset, including the Sprint Tools Suite, Oracle Databases, Postgres Databases, and Apache Tomcat, all integrated with Java, to ensure the system's smooth operation",
+            "Demonstrated a profound mastery of various data structures, from standard arrays to advanced data structures like HashMaps, Lists, and Sets, skillfully handling extensive datasets and university-related information",
+            "Collaborated within a dynamic, cross-cultural team, leveraging my unique bilingual skills in English and Spanish to bridge communication gaps, fostered collaboration, and facilitated effective teamwork",
+            " Continuously enhancing the efficiency and functionality of the University of Montemorelos' Student Management System, ensuring it remains at the forefront of technological advancements and educational excellence."
         ],
     },
 ];
