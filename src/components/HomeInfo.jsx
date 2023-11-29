@@ -20,7 +20,12 @@ const renderContent = {
             Hey there, I'm <span className='font-semibold'>Matt</span> 👋
             <br />
             A software Engineer from Houston!
+            <br />
+            <br />
+            Spin around my island to learn more about me!
         </h1>
+
+
     ),
     2: (
         <InfoBox text="Worked on lots different projects and picked up many skills along the way"

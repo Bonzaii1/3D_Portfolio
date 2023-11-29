@@ -6,6 +6,7 @@ import tesla from './tesla.png'
 import logo from './logo.svg'
 import selenelogo from './selenelogo.png'
 import umlogo from './umlogo.png'
+import GOL from './GOL.png'
 
 export {
     hero,
@@ -15,5 +16,6 @@ export {
     tesla,
     logo,
     selenelogo,
-    umlogo
+    umlogo,
+    GOL
 }

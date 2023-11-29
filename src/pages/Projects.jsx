@@ -13,7 +13,7 @@ const Projects = () => {
 
             <div className='mt-5 flex flex-col gap-3 text-slate-500'>
                 <p>
-                    Filler texts talking about my projects
+                    Here are some of the projects that I hold dear to my heart as I went thorough my academic experience!
                 </p>
             </div>
 
