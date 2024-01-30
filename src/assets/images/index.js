@@ -7,6 +7,7 @@ import logo from './logo.svg'
 import selenelogo from './selenelogo.png'
 import umlogo from './umlogo.png'
 import GOL from './GOL.png'
+import labyrinth from './labyrinth.png'
 
 export {
     hero,
@@ -17,5 +18,6 @@ export {
     logo,
     selenelogo,
     umlogo,
-    GOL
+    GOL,
+    labyrinth
 }

@@ -1,4 +1,4 @@
-import { selenelogo, umlogo, GOL } from "../assets/images";
+import { selenelogo, umlogo, GOL, labyrinth } from "../assets/images";
 import {
     car,
     contact,
@@ -107,16 +107,6 @@ export const skills = [
 
 export const experiences = [
     {
-        title: "Sql Developer Intern",
-        company_name: "Selene Finance",
-        icon: selenelogo,
-        iconBg: "#00A583",
-        date: "May 2022 - August 2022",
-        points: [
-            "Crafting complex SQL queries , and meticulously refining and enhancing the performance of established stored procedures using the powerful environment of Microsoft SQL Server Management Studio."
-        ],
-    },
-    {
         title: "Software Engineer",
         company_name: "University of Montemorelos",
         icon: umlogo,
@@ -130,6 +120,16 @@ export const experiences = [
             " Continuously enhancing the efficiency and functionality of the University of Montemorelos' Student Management System, ensuring it remains at the forefront of technological advancements and educational excellence."
         ],
     },
+    {
+        title: "Sql Developer Intern",
+        company_name: "Selene Finance",
+        icon: selenelogo,
+        iconBg: "#00A583",
+        date: "May 2022 - August 2022",
+        points: [
+            "Crafting complex SQL queries , and meticulously refining and enhancing the performance of established stored procedures using the powerful environment of Microsoft SQL Server Management Studio."
+        ],
+    }
 ];
 
 export const socialLinks = [
@@ -163,8 +163,16 @@ export const projects = [
         iconUrl: GOL,
         theme: 'btn-back-yellow',
         name: 'Conway\'s Game Of Life',
-        description: 'Worked on the famous simulation exercise known as Conway\s Game of Life using Python and then translated to JavaScript to showcase on my portfolio! The 4 unique rules made this a fun challenge as the third rule in particular made the algorithm interesting to work with!',
+        description: 'Worked on the famous simulation exercise known as Conway\s Game of Life using Python and pygame then translated to JavaScript and react to showcase on my portfolio! The 4 unique rules made this a fun challenge as the third rule in particular made the algorithm interesting to work with!',
         link: '/GOL',
+        inSite: true
+    },
+    {
+        iconUrl: labyrinth,
+        theme: 'btn-back-black',
+        name: 'Maze Generator / Solver',
+        description: 'Created a Generator that can create a maze using a DFS algorithm. Upon finishing I also created a Maze Solving algorithm using a BFS technique. Originally made with Python and Pygame and then translated and ported onto Javascript and React to present in this portfolio!',
+        link: '/maze',
         inSite: true
     },
     {

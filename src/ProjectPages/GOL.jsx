@@ -99,7 +99,7 @@ const GOL = () => {
                 </p>
             </div>
 
-            <div className='w-full h-full mt-8 p-4 flex flex-col'>
+            <div className='content'>
                 <div className="grid lg:grid-cols-max md:grid-cols-12 sm:grid-cols-5">
                     {Array.from({ length: numRows }).map((_, rowIndex) => (
                         Array.from({ length: numCols }).map((_, colIndex) => (
