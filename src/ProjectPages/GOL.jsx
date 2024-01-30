@@ -93,6 +93,12 @@ const GOL = () => {
                 Conway's <span className='yellow-gradient_text font-semibold drop-shadow'>Game of Life</span>
             </h1>
 
+            <div className='mt-5 flex flex-col gap-3 text-slate-500'>
+                <p>
+                    It's a presentation of the classic Game of Life!! Click on cells to set them as either Active or Inactive! Hit Random to generate a random distribution of cells on the grid. Click reset to reset the Grid! You can start and stop the simulation at any time! Let me know if you find any fun patterns!
+                </p>
+            </div>
+
             <div className='w-full h-full mt-8 p-4 flex flex-col'>
                 <div className="grid lg:grid-cols-max md:grid-cols-12 sm:grid-cols-5">
                     {Array.from({ length: numRows }).map((_, rowIndex) => (
