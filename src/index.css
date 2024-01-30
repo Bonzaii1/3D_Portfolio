@@ -26,6 +26,10 @@ body:has(.card[data-color="green"]:hover) {
         @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
     }
 
+    .max-container-GOL {
+        @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[65px] px-8 min-h-[calc(100vh-80px)];
+    }
+
     .head-text {
         @apply sm:text-5xl text-3xl font-semibold sm:leading-snug font-poppins;
     }
@@ -36,6 +40,10 @@ body:has(.card[data-color="green"]:hover) {
 
     .blue-gradient_text {
         @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent;
+    }
+
+    .yellow-gradient_text {
+        @apply bg-gradient-to-r from-[#EDD622] to-[#D9C21D] bg-clip-text text-transparent;
     }
 
     .input {

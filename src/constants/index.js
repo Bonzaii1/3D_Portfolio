@@ -152,25 +152,28 @@ export const socialLinks = [
 
 export const projects = [
     {
-        iconUrl: umlogo,
-        theme: 'btn-back-purple',
-        name: 'Perimiter Security University Project',
-        description: 'Worked in a five-member team in a cutting-edge project utilizing Raspberry Pi to connect various sensors for real-time environmental monitoring in Data Centers and Server Rooms. Our work contributed to a forthcoming scientific publication and involved seamless data transmission using Mosquitto and OneSignal, ultimately leading to the creation of an innovative Alert Style Mobile Application for enhanced data center security',
-        link: article,
-    },
-    {
         iconUrl: threads,
-        theme: 'btn-back-green',
-        name: 'Portfolio Project',
-        description: 'Designed and programmed this very portfolio using Vite and ThreeJS to implement 3D model renders!',
-        link: 'https://matthewsherrera.com',
+        theme: 'btn-back-black',
+        name: 'Threads Clone',
+        description: 'Created a working clone of Threads! Built using NextJs 13 integrated with Mongo!',
+        link: 'https://threads-kappa-seven.vercel.app',
+        inSite: false
     },
     {
         iconUrl: GOL,
         theme: 'btn-back-yellow',
         name: 'Conway\'s Game Of Life',
-        description: 'Worked on the famous simulation exercise known as Conway\s Game of Life using Python! The 4 unique rules made this a fun challenge as the third rule in particular made the algorithm interesting to work with!',
-        link: 'https://github.com/Bonzaii1/Conways-GOL',
+        description: 'Worked on the famous simulation exercise known as Conway\s Game of Life using Python and then translated to JavaScript to showcase on my portfolio! The 4 unique rules made this a fun challenge as the third rule in particular made the algorithm interesting to work with!',
+        link: '/GOL',
+        inSite: true
+    },
+    {
+        iconUrl: umlogo,
+        theme: 'btn-back-purple',
+        name: 'Perimiter Security University Project',
+        description: 'Worked in a five-member team in a cutting-edge project utilizing Raspberry Pi to connect various sensors for real-time environmental monitoring in Data Centers and Server Rooms. Our work contributed to a forthcoming scientific publication and involved seamless data transmission using Mosquitto and OneSignal, ultimately leading to the creation of an innovative Alert Style Mobile Application for enhanced data center security',
+        link: article,
+        inSite: false
     },
 
 ];
