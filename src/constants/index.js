@@ -1,9 +1,7 @@
 import { selenelogo, umlogo, GOL, labyrinth } from "../assets/images";
 import {
-    car,
     contact,
     python,
-    estate,
     express,
     git,
     github,
@@ -14,11 +12,8 @@ import {
     java,
     nextjs,
     nodejs,
-    pricewise,
     react,
     flask,
-    snapgram,
-    summiz,
     tailwindcss,
     threads,
     typescript,
