@@ -1,4 +1,4 @@
-import { selenelogo, umlogo, GOL, labyrinth } from "../assets/images";
+import { selenelogo, umlogo, GOL, labyrinth, alma } from "../assets/images";
 import {
     contact,
     python,
@@ -146,6 +146,14 @@ export const socialLinks = [
 ];
 
 export const projects = [
+    {
+        iconUrl: alma,
+        theme: 'btn-back-blue',
+        name: 'Project AALMMA',
+        description: 'My Current Project for a medical group that runs Medical Brigades in my University. They run these events in isolated areas where medical attention can be hard to come by and they run a physical EHR System which can be hard to maintain and scale. My goal with this project is to create a system for them where storing patients records can be easier/efficient and to have a standarized historical on their patients for easy access to perform follow ups on patients or even generate statistics! I hope this to be a project that will be not only used but maintained, scaled, and improved on with the help of future engineering students that pass through that Ministry! This project is being developed using the PERN stack!',
+        link: 'https://github.com/Bonzaii1/AALMAA',
+        inSite: false
+    },
     {
         iconUrl: threads,
         theme: 'btn-back-black',
